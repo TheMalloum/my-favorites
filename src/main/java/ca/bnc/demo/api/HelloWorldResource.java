@@ -42,7 +42,7 @@ public class HelloWorldResource {
     @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    @Cache(maxAge=2300, sMaxAge = 2300)
+    @Cache(maxAge=10, sMaxAge = 10)
     public Response get(@PathParam("id") String id) {
 
 

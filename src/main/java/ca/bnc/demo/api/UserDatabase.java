@@ -9,11 +9,7 @@ public class UserDatabase {
 
     public static HelloWorld get(String id) {
         HelloWorld user = users.get(id);
-
-
-        if(user == null)  user = new HelloWorld("404");
-
-          return user;
+        return user;
     }
 
     public static Collection<HelloWorld> get() {
@@ -25,7 +21,6 @@ public class UserDatabase {
         user.setLastModified(new Date());
         users.put(id, user);
     }
-
 
 
     public static void remove(String id) {

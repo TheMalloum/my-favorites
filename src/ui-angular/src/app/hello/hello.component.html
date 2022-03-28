@@ -1,0 +1,19 @@
+<form class="example-form" >
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>ID</mat-label>
+    <input matInput type="number" [(ngModel)]="hello.id" name="id"  id="id" matInput value="1">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>message</mat-label>
+    <textarea matInput [(ngModel)]="hello.message"  name="message"  id="message" placeholder="Helo" value="hello  word "></textarea>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="get()">GET</button>
+
+  <button mat-raised-button color="primary" (click)="put()">PUT </button>
+
+</form>
+
+
+<pre *ngIf="show">{{ result | async | json }}</pre>
